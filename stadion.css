@@ -1,0 +1,174 @@
+@import url("https://fonts.goggleapis.com/css2?family=Comfortaa:wght@300;400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.2rem;
+}
+header {
+  width: 1200px;
+  max-width: 80%;
+  margin: auto;
+  height: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 999;
+}
+.background {
+  width: 100vw;
+  height: 100vh; /* Atur tinggi sesuai kebutuhan */
+  background-image: url("img/logo.jpg"); /* Tautan ke gambar latar */
+  background-size: cover; /* Supaya gambar mengisi penuh */
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 90%;
+  padding: 30px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  width: 160px;
+  margin-top: -10px;
+  cursor: pointer;
+}
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 20px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  padding: 15px;
+}
+li a:hover {
+  background: white;
+  transition: 0.5s;
+}
+.navbar a:hover {
+  color: black;
+}
+.fakhtur {
+  margin: 20px auto;
+  color: #000;
+  text-align: center;
+}
+.container {
+  display: flex;
+  width: 100vw;
+}
+.content {
+  width: 100%;
+  position: absolute;
+  color: white;
+  top: 45%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 1;
+  font-family: sans-serif;
+}
+.content h1 {
+  margin-top: 80px;
+  font-size: 90px;
+  font-weight: 800;
+}
+button {
+  width: 200px;
+  padding: 15px;
+  margin: 20px 5px;
+  text-align: center;
+  border-radius: 25px;
+  color: black;
+  border: 2px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:hover {
+  background: rgb(0, 192, 226);
+  transition: 0.5s;
+}
+button:hover {
+  color: white;
+}
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: all 700ms ease-in;
+}
+.panel h1 {
+  font-size: 35px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h1 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+  .comtainer {
+    width: 100vw;
+    transition: opacity 0.3s ease-in 0.4s;
+  }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+#logoutBtn {
+  background-color: #fff; /* Warna merah untuk tombol logout */
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: auto; /* Dorong tombol ke paling kanan */
+}
+
+#logoutBtn:hover {
+  background-color: rgb(0, 192, 226);
+  /* Warna lebih gelap saat hover */
+  transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+#logoutBtn:active {
+  transform: scale(0.95); /* Efek klik */
+}

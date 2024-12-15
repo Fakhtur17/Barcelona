@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stadion</title>
+    <link rel="stylesheet" href="stadion.css" />
+    <style>
+      /* Reset Style */
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        height: 100%;
+        background-color: #f5f5f5;
+      }
+
+      /* Container Flexbox */
+      .bangun {
+        display: flex;
+        height: 50vh;
+        flex-direction: row;
+        width: 100%;
+      }
+
+      /* Right Section */
+      .right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background-color: #000000;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .right h1 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: #ffffff;
+      }
+
+      .right p {
+        color: #333;
+        text-align: center;
+        line-height: 1.6;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        color: #ffffff;
+      }
+
+      .learn-more {
+        background-color: #004b87;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .learn-more:hover {
+        background-color: #a5002a;
+      }
+      .about {
+        background: linear-gradient(
+          45deg,
+          #001f3d,
+          #d72b2b
+        ); /* Biru Navy ke Merah */
+        color: #fff;
+        text-align: center;
+        width: 100vw; /* Lebar penuh */
+        height: 50vh; /* Tinggi penuh */
+        position: relative;
+        overflow: hidden;
+        display: flex; /* Agar konten di tengah */
+        justify-content: center;
+        align-items: center;
+      }
+
+      .about::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("barcelona.jpg") no-repeat center/cover;
+        opacity: 0.3;
+        z-index: -1;
+      }
+
+      .about h1 {
+        font-size: 3rem;
+        margin: 0;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .about p {
+        font-size: 1.2rem;
+        margin: 20px 0;
+        line-height: 1.6;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* About Section */
+      .tur {
+        padding: 50px 20px;
+        text-align: center;
+      }
+
+      .tur h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #004b87;
+      }
+
+      .tur p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* Footer */
+      /* Footer */
+      footer {
+        background-color: #004b87;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0; /* Mengatur padding atas dan bawah */
+        margin-top: 30px;
+        font-size: 0.9rem;
+        width: 100%; /* Pastikan footer mengisi lebar penuh */
+      }
+
+      footer p {
+        margin: 0;
+        font-size: 0.9rem;
+        width: 100%; /* Lebar penuh untuk teks */
+        padding: 0 10px; /* Menambahkan sedikit ruang ke kiri dan kanan */
+        text-align: center; /* Pastikan teks tetap di tengah */
+      }
+
+      /* Responsif untuk tampilan lebih kecil */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column; /* Mengubah menjadi kolom pada perangkat kecil */
+        }
+
+        .left,
+        .right {
+          width: 100%;
+        }
+
+        .image {
+          width: 250px;
+          height: 250px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <img src="img/barca2.png" alt=" logo.png" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pemain.html">Pemain</a></li>
+          <li><a href="stadion.html">Stadion</a></li>
+          <li><a href="shop.php">Shop</a></li>
+        </ul>
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </header>
+    <!-- tulisan Pemain -->
+    <div class="content">
+      <h1>Stadion Barcelona</h1>
+      <div>
+        <button type="button" id="scrollButton">Detail Stadion</button>
+      </div>
+    </div>
+
+    <!-- Content of the page -->
+    <div class="background"></div>
+    <!-- Hero Section -->
+    <section class="about" id="aboutStadium">
+      <div class="bapak">
+        <h1>Welcome to Barcelona</h1>
+        <p>
+          Pengunjung dari seluruh dunia, selamat datang di Camp Nou, rumah
+          legendaris dan magis FC Barcelona. Kami sangat senang Anda berada di
+          sini dan berharap Anda menikmati pertandingan. Terima kasih banyak
+          telah datang, dan kami berharap dapat melihat Anda kembali lagi sangat
+          segera.
+        </p>
+      </div>
+    </section>
+
+    <!-- content setelah background -->
+    <div class="bangun">
+      <!-- Left Section with Image and Title -->
+      <img src="img/background.jpeg" alt="" />
+
+      <!-- Right Section with Info and Call to Action -->
+      <div class="right">
+        <h1>Jelajahi Studio Bola</h1>
+        <p>
+          Selamat datang di Studio Bola, tempat bagi para penggemar sepak bola
+          untuk menikmati segala hal tentang dunia sepak bola. Dapatkan analisis
+          pertandingan, berita terkini, dan siaran langsung dari berbagai
+          turnamen besar.
+        </p>
+        <a href="#" class="learn-more">Pelajari Lebih Lanjut</a>
+      </div>
+    </div>
+    <!-- Judul stadion -->
+    <div class="fakhtur">
+      <h1>Stadion Sejarah</h1>
+    </div>
+
+    <div class="container">
+      <div
+        class="panel active"
+        style="background-image: url(img/Stadion1.jpeg)"
+      >
+        <h1>Stadion 1</h1>
+      </div>
+      <div class="panel" style="background-image: url(img/Stadion2.jpeg)">
+        <h1>Stadion 2</h1>
+      </div>
+      <div class="panel" style="background-image: url(img/3.jpeg)">
+        <h1>Stadion 3</h1>
+      </div>
+      <div class="panel" style="background-image: url(img/Stadion4.jpeg)">
+        <h1>Stadion 4</h1>
+      </div>
+      <div class="panel" style="background-image: url(img/Stadion\ 3.jpeg)">
+        <h1>Stadion 5</h1>
+      </div>
+    </div>
+    <!-- About Section -->
+    <section class="tur">
+      <h2>About Stadion</h2>
+      <p>
+        Stadion Spotify Camp Nou, markas FC Barcelona, dibuka pada 24 September
+        1957 dengan kapasitas awal 93.053 penonton, menggantikan Les Corts.
+        Dirancang oleh Francesc Mitjans Miro dan Josep Soteras Mauri,
+        kapasitasnya pernah mencapai 120.000 penonton pada 1982 sebelum
+        dikurangi menjadi 99.354 akibat aturan larangan tribun berdiri. Camp Nou
+        menjadi saksi momen bersejarah seperti final Liga Champions UEFA dan
+        Piala Dunia 1982, serta pertandingan ikonik seperti laga Manchester
+        United vs Bayern Munich pada 1999. Stadion ini menerima rating bintang
+        lima dari UEFA berkat renovasi pada akhir 1990-an. Saat ini, renovasi
+        besar sedang berlangsung untuk meningkatkan kapasitas menjadi 105.000
+        penonton dan memperbarui fasilitas, direncanakan selesai pada 2026.
+        Selama renovasi, Barcelona bermain di Estadi Olímpic Lluís Companys.
+        Camp Nou tetap menjadi simbol kebanggaan bagi klub dan penggemarnya.
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2024 Barcelona. Semua hak dilindungi.</p>
+    </footer>
+
+    <script src="stadion.js"></script>
+  </body>
+</html>
