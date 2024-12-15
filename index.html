@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barceloana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,900;1,100;1,400;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&family=Material+Symbols+Rounded&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* General Reset */
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(45deg, #001f3d, #d72b2b); /* Biru Navy ke Merah */
+        color: #fff;
+        text-align: center;
+        width: 100vw; /* Lebar penuh */
+        height: 70vh; /* Tinggi penuh */
+        position: relative;
+        overflow: hidden;
+        display: flex; /* Agar konten di tengah */
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .hero::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: url('barcelona.jpg') no-repeat center/cover;
+          opacity: 0.3;
+          z-index: -1;
+      }
+
+      .hero h1 {
+          font-size: 3rem;
+          margin: 0;
+          line-height: 1.2;
+          font-weight: 700;
+          text-transform: uppercase;
+      }
+
+      .hero p {
+          font-size: 1.2rem;
+          margin: 20px 0;
+          line-height: 1.6;
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+      }
+
+      /* About Section */
+      .about {
+          padding: 50px 20px;
+          text-align: center;
+      }
+
+      .about h2 {
+          font-size: 2.5rem;
+          margin-bottom: 20px;
+          color: #004b87;
+      }
+
+      .about p {
+          font-size: 1.1rem;
+          line-height: 1.8;
+          color: #333;
+          max-width: 800px;
+          margin: 0 auto;
+      }
+
+      /* Footer */
+      /* Footer */
+      footer {
+        background-color: #004b87;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0; /* Mengatur padding atas dan bawah */
+        margin-top: 30px;
+        font-size: 0.9rem;
+        width: 100%; /* Pastikan footer mengisi lebar penuh */
+      }
+
+      footer p {
+        margin: 0;
+        font-size: 0.9rem;
+        width: 100%; /* Lebar penuh untuk teks */
+        padding: 0 10px; /* Menambahkan sedikit ruang ke kiri dan kanan */
+        text-align: center; /* Pastikan teks tetap di tengah */
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+          .hero h1 {
+              font-size: 2rem;
+          }
+
+          .hero p {
+              font-size: 1rem;
+          }
+
+          .about h2 {
+              font-size: 2rem;
+          }
+      }
+  </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <img src="img/barca2.png" alt=" logo.png" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pemain.html">Pemain</a></li>
+          <li><a href="stadion.html">Stadion</a></li>
+          <li><a href="shop.php">Shop</a></li>
+        </ul>
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </header>
+
+    <div class="slider">
+      <div class="list">
+        <div class="item">
+          <img src="img/decul.jpeg" alt="Image 1" />
+          <div class="detail">
+            <div class="title">Barcelona</div>
+            <div class="name">Pendiri Barcelona</div>
+            <figure>
+              <img src="img/barca.png" alt="Avatar 1" />
+              <figcaption>Di dirikanya Barcelona</figcaption>
+            </figure>
+            <div class="desc">
+              FC Barcelona didirikan pada 29 November 1899 oleh Joan Gamper dan sekelompok pemain dari berbagai negara. Klub ini meraih kesuksesan awal
+              dengan menjuarai Copa Macaya pada 1902 dan menjadi yang pertama di liga Spanyol pada 1929. 
+              Pada 2009, Barcelona mencetak sejarah dengan meraih treble, mengalahkan Real Madrid dalam persaingan ketat.
+              Era kepelatihan Pep Guardiola (2008-2012) membawa klub meraih enam trofi dalam satu tahun, termasuk Liga Champions.
+              Hingga kini, Barcelona tetap menjadi simbol budaya Catalonia dan salah satu klub tersukses di dunia dengan banyak gelar, termasuk 27 gelar La Liga dan 5 Liga Champions. 
+            </div>
+            <a href="#more-details-section" class="more">More details &raquo;</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/2.jpeg" alt="Image 2" />
+          <div class="detail">
+            <div class="title">Barcelona </div>
+            <div class="name">Terkenal Di Internasional </div>
+            <figure>
+              <img src="img/barca.png" alt="Avatar 1" />
+              <figcaption>Sejarah Barcelona Tahun 1950</figcaption>
+            </figure>
+            <div class="desc">
+              Pada 1950-an, Barcelona mulai dikenal secara internasional, sementara pada 1992,
+              mereka memenangkan Liga Champions pertama di bawah pelatih Johan Cruyff. Era 2000-an
+              melihat dominasi klub dengan treble di 2009 dan 2015. Hingga kini, Barcelona memiliki banyak gelar, 
+              termasuk 27 La Liga dan 5 Liga Champions, menjadikannya salah satu klub tersukses di dunia.
+            </div>
+            <a href="#more-details-section" class="more">More details &raquo;</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/logo2.jpg" alt="Image 3" />
+          <div class="detail">
+            <div class="title">Barcelona</div>
+            <div class="name">Perjalanan Barcelona</div>
+            <figure>
+              <img src="img/barca.png" alt="Avatar 1" />
+              <figcaption>kejuaraan </figcaption>
+            </figure>
+            <div class="desc">
+              Klub ini segera meraih kesuksesan dengan menjuarai Copa Macaya pada 1902. Pada 1929,
+              Barcelona menjadi salah satu pendiri La Liga dan menjadi juara pertama.
+              Era keemasan terjadi di bawah Johan Cruyff pada 1992, ketika mereka memenangkan 
+              Liga Champions pertama. Di bawah Pep Guardiola (2008-2012), Barcelona meraih treble pada
+              2009 dan menjadi klub pertama yang meraih sextuple. Hingga kini, Barcelona memiliki 27 gelar
+               La Liga dan 5 Liga Champions, menjadikannya salah satu klub paling sukses di dunia
+            </div>
+            <a href="#more-details-section" class="more">More details &raquo;</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/4.jpeg" alt="Image 4" />
+          <div class="detail">
+            <div class="title">Barceloana</div>
+            <div class="name">Prestasi Dari Tahun Ke Tahun </div>
+            <figure>
+              <img src="img/barca.png" alt="Avatar 1" />
+              <figcaption>
+                Prestasi Barcelona
+              </figcaption>
+            </figure>
+            <div class="desc">
+              FC Barcelona telah mencapai banyak prestasi gemilang sepanjang sejarahnya. Berikut adalah koleksi trofi yang berhasil diraih hingga saat ini:
+              27 Gelar La Liga: Juara liga Spanyol pertama kali pada tahun 1929.
+              31 Gelar Copa del Rey: Klub tersukses di ajang ini, dengan gelar terakhir diraih pada tahun 2021.
+              14 Gelar Piala Super Spanyol: Mencakup berbagai edisi kompetisi ini.
+              5 Gelar Liga Champions UEFA: Pertama kali dimenangkan pada tahun 1992.
+              4 Gelar Piala Winners UEFA: Mengukuhkan status mereka di Eropa.
+              4 Gelar Piala Super UEFA dan 3 Piala Dunia Antarklub FIFA: Menyempurnakan prestasi internasional klub124.
+              Barcelona juga menjadi klub pertama yang meraih treble (La Liga, Copa del Rey, dan Liga Champions).
+            </div>
+            <a href="#more-details-section" class="more">More details &raquo;</a>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/1.jpeg" alt="Image 5" />
+          <div class="detail">
+            <div class="title">Pemain Bersejarah</div>
+            <div class="name">Lionel Messi </div>
+            <figure>
+              <img src="img/barca.png" alt="Avatar 1" />
+              <figcaption>Pemain Pada Massanya </figcaption>
+            </figure>
+            <div class="desc">
+              Seorang pencetak gol yang produktif dan playmaker kreatif, Messi memegang rekor sebagai
+              pencetak gol terbanyak sepanjang masa di La Liga (474 gol), gol terbanyak di La Liga dan
+              Eropa dalam satu musim (50 gol), hat-trick terbanyak di La Liga (36) dan Liga Champions UEFA (8),
+              serta umpan gol terbanyak di La Liga (192), umpan gol terbanyak La Liga dan Eropa selama satu musim.
+              Messi pindah ke Spanyol untuk bergabung dengan Barcelona pada usia 13 tahun, di mana ia melakukan debut
+              kompetitifnya pada usia 17 tahun pada Oktober 2004. Pada musim 2008–2009, ia membantu Barcelona meraih gelar treble pertama.
+            </div>
+            <a href="#more-details-section" class="more">More details &raquo;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="thumbnail">
+        <div class="item">
+          <img src="img/decul.jpeg" alt="thumbnail 1" />
+
+          <div class="detail">
+            <div class="name">Pendiri Barcelona </div>
+            <blockquote>"Barcelona Adalah Tim Eropa ."</blockquote>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/2.jpeg" alt="thumbnail 2" />
+
+          <div class="detail">
+            <div class="name">Tahun 1950</div>
+            <blockquote>"Sejarah Berdirinya Di Tahun 1950."</blockquote>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/3.jpeg" alt="thumbnail 3" />
+
+          <div class="detail">
+            <div class="name">Perjalanan Kejuaraan </div>
+            <blockquote>"Kejuaraan Yang Di Raihnya ."</blockquote>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/4.jpeg" alt="thumbnail 4" />
+
+          <div class="detail">
+            <div class="name">Kejuaraan Yang Sudah Di raih  </div>
+            <blockquote>"Kejuaraan Dari Tahun ke Tahun  ."</blockquote>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/5.jpeg" alt="thumbnail 5" />
+
+          <div class="detail">
+            <div class="name">Pemain Legendaris </div>
+            <blockquote>"Pemain Terbaik Pada Masanya ."</blockquote>
+          </div>
+        </div>
+      </div>
+
+      <div class="arrows">
+        <button id="prev">&lt;</button>
+        <button id="next">&gt;</button>
+      </div>
+
+      <div class="loading-bar"></div>
+    </div>
+    <!-- Bagian Kedua  -->
+    <div id="more-details-section" class="more-details">
+        <div class="container swiper">
+          <div class="card-wrapper">
+              <ul class="card-list swiper-wrapper">
+                  <!-- Card 1 -->
+                  <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                          <img src="img/bola1.jpg" alt="Card Image" class="card-image">
+                          <p class="badge bola1">Laliga</p>
+                          <h2 class="card-title"> Juara liga Spanyol pertama kali pada tahun 1929.</h2>
+                          <button class="card-button material-symbols-rounded">arrow_forward</button>
+                      </a>
+                  </li>
+                  <!-- Card 2 -->
+                  <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                          <img src="img/bola2.jpg" alt="Card Image" class="card-image">
+                          <p class="badge bola2">Copa Del Rey</p>
+                          <h2 class="card-title">Klub tersukses di ajang ini, dengan gelar terakhir diraih pada tahun 2021.</h2>
+                          <button class="card-button material-symbols-rounded">arrow_forward</button>
+                      </a>
+                  </li>
+                  <!-- Card 3 -->
+                  <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                          <img src="img/bola3.jpg" alt="Card Image" class="card-image">
+                          <p class="badge bola3">Piala Super Spanyol</p>
+                          <h2 class="card-title"> Mencakup berbagai edisi kompetisi ini.</h2>
+                          <button class="card-button material-symbols-rounded">arrow_forward</button>
+                      </a>
+                  </li>
+                  <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                          <img src="img/bola4.jpg" alt="Card Image" class="card-image">
+                          <p class="badge bola4">UEFA SuperCup</p>
+                          <h2 class="card-title">Pertandingan tahunan yang mempertemukan juara Liga Champions UEFA dan juara Liga Eropa UEFA.</h2>
+                          <button class="card-button material-symbols-rounded">arrow_forward</button>
+                      </a>
+                  </li>
+                  <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                          <img src="img/bola5.jpg" alt="Card Image" class="card-image">
+                          <p class="badge bola5">Piala Dunia Antar Klub</p>
+                          <h2 class="card-title">Kompetisi yang mempertemukan klub juara dari setiap konfederasi sepak bola di dunia.</h2>
+                          <button class="card-button material-symbols-rounded">arrow_forward</button>
+                      </a>
+                  </li>
+                  <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                          <img src="img/bola6.jpg" alt="Card Image" class="card-image">
+                          <p class="badge bola6">UEFA Cup</p>
+                          <h2 class="card-title">Kompetisi yang diikuti oleh klub-klub Eropa yang tidak berhasil lolos ke Liga Champions. </h2>
+                          <button class="card-button material-symbols-rounded">arrow_forward</button>
+                      </a>
+                  </li>
+                  <li class="card-item swiper-slide">
+                      <a href="#" class="card-link">
+                          <img src="img/bola7.jpg" alt="Card Image" class="card-image">
+                          <p class="badge bola7">Champions League</p>
+                          <h2 class="card-title"> Barcelona klub tersukses dalam sejarah Liga Champions dengan tiga gelar pada tahun 1992, 2006, 2009, dan 2015.</h2>
+                          <button class="card-button material-symbols-rounded">arrow_forward</button>
+                      </a>
+                  </li>
+              </ul>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+          </div>
+     </div>
+     <!-- Hero Section -->
+    <section class="hero">
+      <div class="bapak">
+          <h1>Welcome to Barcelona</h1>
+          <p>Temukan pesona Barcelona – sebuah kota seni, budaya, dan peluang tanpa batas. Mari kita jelajahi bersama!</p>
+      </div>
+  </section>
+  
+  <!-- About Section -->
+  <section class="about">
+      <h2>About Barcelona</h2>
+      <p>
+          Barcelona adalah kota yang terletak di wilayah Catalonia, Spanyol, yang kaya akan sejarah, budaya, dan inovasi. Dikenal karena arsitektur ikonik karya Antoni Gaudí seperti Sagrada Família dan Park Güell, kota ini menarik jutaan wisatawan setiap tahun. Barcelona juga terkenal dengan seni, pantai Mediterania, dan tim sepak bola legendaris FC Barcelona. Baik Anda mengunjungi untuk menikmati kuliner, festival, atau jalan-jalan yang indah, Barcelona menawarkan pengalaman yang tak terlupakan.
+      </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+      <p>© 2024 Barcelona. Semua hak dilindungi.</p>
+  </footer>
+
+
+    <div>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
